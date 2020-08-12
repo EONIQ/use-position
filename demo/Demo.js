@@ -26,7 +26,7 @@ export const Demo = ({watch, settings}) => {
         longitude: {longitude}<br/>
         timestamp: {timestamp}<br/>
         accuracy: {accuracy && `${accuracy}m`}<br/>
-        error: {error}
+        error: {error && error.message}
       </code>
     </>
   );

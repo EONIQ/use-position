@@ -20,7 +20,7 @@ export const usePosition = (watch = false, settings = defaultSettings) => {
   };
 
   const onError = (error) => {
-    setError(error.message);
+    setError(error);
   };
 
   useEffect(() => {

@@ -96,7 +96,7 @@ export const Demo = () => {
       longitude: {longitude}<br/>
       timestamp: {timestamp}<br/>
       accuracy: {accuracy && `${accuracy}m`}<br/>
-      error: {error}
+      error: {error && error.message}
     </code>
   );
 };
@@ -118,4 +118,11 @@ export const Demo = () => {
 - `longitude: number` - longitude (i.e. `4.8717809`),
 - `timestamp: number` - timestamp when location was detected (i.e. `1561815013194`),
 - `accuracy: number` - location accuracy in meters (i.e. `24`),
-- `error: string` - error message or `null` (i.e. `User denied Geolocation`)
+- `error: object` - error object with code and message or `null` (i.e.
+  ```
+  {
+    code: 1,
+    message: 'User denied Geolocation'
+  }
+  ```
+)
